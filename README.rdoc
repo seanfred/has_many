@@ -1,0 +1,3 @@
+-- Has Many relationship app
+
+This app allows teachers to assign assignments to students. Students and teachers can have many assignments.

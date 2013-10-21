@@ -14,16 +14,21 @@
 ActiveRecord::Schema.define(version: 20131021032728) do
 
   create_table "assignments", force: true do |t|
+    t.integer  "teacher_id"
+    t.integer  "student_id"
+    t.string   "assignments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "students", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "teachers", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

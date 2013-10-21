@@ -10,7 +10,18 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= f.label :assignments %><br>
+    <%= f.text_field :assignments %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher_id %><br>
+    <%= f.number_field :teacher_id %>
+  </div>
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.number_field :student_id %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

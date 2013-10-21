@@ -3,15 +3,18 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Assignment Name</th>
+      <th>Teacher Name</th>
+      <th>Student Name</th>
     </tr>
   </thead>
 
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
+        <td><%= assignment.assignments %></td>
+        <td><%= assignment.teacher.name %></td>
+        <td><%= assignment.student.name %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,3 +26,9 @@
 <br>
 
 <%= link_to 'New Assignment', new_assignment_path %>
+<%= link_to 'New Teacher', new_teacher_path %><br>
+<%= link_to 'New Student', new_student_path %>
+<br>
+<br>
+<%= link_to 'Show All Teachers', teachers_path %>
+<%= link_to 'Show All Students', students_path %>
